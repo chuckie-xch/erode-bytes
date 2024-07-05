@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.fewbug</groupId>
+    <artifactId>erode-bytes</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>erode-bytes</name>
+    <packaging>pom</packaging>
+    <description>erode-bytes</description>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.7</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <modules>
+        <module>common</module>
+        <module>springboot3-mybatis</module>
+        <module>leetcode</module>
+    </modules>
+
+    <url/>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>chuckie-xch</id>
+            <name>Chunhang.xch</name>
+            <email>1205241831@qq.com</email>
+            <roles>
+                <role>Developer</role>
+            </roles>
+            <timezone>-5</timezone>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:https://github.com/yourusername/erode-bytes.git</connection>
+        <developerConnection>scm:git:ssh://github.com:chuckie-xch/erode-bytes.git</developerConnection>
+        <url>https://github.com/chuckie-xch/erode-bytes</url>
+    </scm>
+
+    <properties>
+        <java.version>17</java.version>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <erode-bytes.version>0.0.1-SNAPSHOT</erode-bytes.version>
+        <spring-boot.version>3.2.7</spring-boot.version>
+        <!-- 三方包version -->
+        <lombok.version>1.18.30</lombok.version>
+        <hutool-all.version>5.8.25</hutool-all.version>
+        <mysql-connector-j.version>8.4.0</mysql-connector-j.version>
+        <mybatis-spring-boot-starter.version>3.0.3</mybatis-spring-boot-starter.version>
+        <druid-spring-boot-3-starter.version>1.2.23</druid-spring-boot-3-starter.version>
+        <mybatis-generator-maven-plugin.version>1.4.2</mybatis-generator-maven-plugin.version>
+    </properties>
+
+
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>com.fewbug.erodebytes</groupId>
+                <artifactId>common</artifactId>
+                <version>${erode-bytes.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fewbug.erodebytes</groupId>
+                <artifactId>springboot3-mybatis</artifactId>
+                <version>${erode-bytes.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fewbug.erodebytes</groupId>
+                <artifactId>leetcode</artifactId>
+                <version>${erode-bytes.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool-all.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+
+            <!-- MySQL Driver -->
+            <dependency>
+                <groupId>com.mysql</groupId>
+                <artifactId>mysql-connector-j</artifactId>
+                <version>${mysql-connector-j.version}</version>
+            </dependency>
+
+            <!-- ORM Framework -->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis-spring-boot-starter.version}</version>
+            </dependency>
+
+            <!-- DataSource: druid -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-3-starter</artifactId>
+                <version>${druid-spring-boot-3-starter.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+</project>
