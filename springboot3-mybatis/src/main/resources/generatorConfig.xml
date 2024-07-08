@@ -3,10 +3,12 @@
         PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
+
     <!-- MyBatis3风格 -->
     <context id="simple" targetRuntime="MyBatis3">
 
         <property name="javaFileEncoding" value="UTF-8"/>
+
 
         <!--生成mapper.xml时覆盖原文件-->
         <plugin type="org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin"/>
@@ -18,7 +20,7 @@
 
         <!-- 数据库连接 -->
         <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/lms?useUnicode=true&amp;characterEncoding=utf8&amp;tinyInt1isBit=true&amp;serverTimezone=GMT%2B8"
+                        connectionURL="jdbc:mysql://localhost:3306/erodebytes?useUnicode=true&amp;characterEncoding=utf8&amp;tinyInt1isBit=true&amp;serverTimezone=GMT%2B8"
                         userId="root" password="admin">
             <!-- 设置为true就只读取db_book下的表, 否则会优先读取到mysql的user表  -->
             <property name="nullCatalogMeansCurrent" value="true"/>
@@ -29,20 +31,20 @@
         </javaTypeResolver>
 
         <!-- 生成PO的包名和位置 -->
-        <javaModelGenerator targetPackage="com.fewbug.dms.dal.po" targetProject="src/main/java"/>
+        <javaModelGenerator targetPackage="com.fewbug.erodebytes.sb3.dal.dataobject" targetProject="src/main/java"/>
 
 
         <!-- 生成XML映射文件的包名和位置 -->
         <sqlMapGenerator targetPackage="mappers.mbg" targetProject="src/main/resources"/>
 
         <!-- 生成Mapper接口的包名和位置 -->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.fewbug.dms.dal.mapper" targetProject="src/main/java"/>
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.fewbug.erodebytes.sb3.dal.mapper"
+                             targetProject="src/main/java"/>
 
         <!-- 要生成对应表配置 -->
-        <table tableName="sys_org" domainObjectName="SysOrgDO">
-            <!-- 主键列 -->
-            <!--            <generatedKey column="id" sqlStatement="MYSQL" identity="true"/>-->
+        <table tableName="test" domainObjectName="TestDO">
 
         </table>
     </context>
+
 </generatorConfiguration>

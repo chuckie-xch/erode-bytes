@@ -1,5 +1,5 @@
--- schema.sql
-DROP TABLE IF EXIST test;
+-- test-schema.sql
+DROP TABLE IF EXISTS test;
 CREATE TABLE `test`
 (
     `id`           BIGINT UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键ID',

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fewbug.erodebytes.sb3.dal.mapper.TestExtMapper">
+    <resultMap id="BaseResultMap" type="com.fewbug.erodebytes.sb3.dal.dataobject.TestDO">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="test_time" jdbcType="TIMESTAMP" property="testTime"/>
+        <result column="is_deleted" jdbcType="BIT" property="isDeleted"/>
+        <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate"/>
+        <result column="creator_id" jdbcType="VARCHAR" property="creatorId"/>
+        <result column="gmt_modified" jdbcType="TIMESTAMP" property="gmtModified"/>
+        <result column="modifier_id" jdbcType="VARCHAR" property="modifierId"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, name, test_time, is_deleted, gmt_create, creator_id, gmt_modified, modifier_id
+    </sql>
+
+    <select id="findByName" resultType="com.fewbug.erodebytes.sb3.dal.dataobject.TestDO">
+        select <include refid="Base_Column_List"></include>
+        from test
+        <where>
+            <if test='name!=null and !"".equals(name)'>
+                and name = #{name}
+            </if>
+        </where>
+    </select>
+
+
+</mapper>

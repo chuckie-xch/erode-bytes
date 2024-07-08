@@ -1,31 +1,26 @@
-package com.fewbug.erodebytes.sb3.dataobject;
+package com.fewbug.erodebytes.sb3.dal.dataobject;
 
 import lombok.Data;
 
 import java.util.Date;
 
-/**
- * @author chunhang.xch
- * @Description
- * @date 2024/7/8 20:41
- **/
 @Data
 public class TestDO {
-
     private Long id;
 
     private String name;
 
     private Date testTime;
 
-    protected Boolean isDeleted;
+    private Boolean isDeleted;
 
-    protected Date gmtCreate;
+    private Date gmtCreate;
 
-    protected String creatorId;
+    private String creatorId;
 
-    protected Date gmtModified;
+    private Date gmtModified;
 
-    protected String modifierId;
+    private String modifierId;
+
 
 }
