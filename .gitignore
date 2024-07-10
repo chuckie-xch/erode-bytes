@@ -32,3 +32,6 @@ target/
 #system
 .DS_Store
 Thumbs.db
+
+#applog
+*/app-log/
