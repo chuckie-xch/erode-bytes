@@ -1,4 +1,4 @@
-package com.fewbug.erodebytes.leetcode.h100;
+package com.fewbug.erodebytes.leetcode.h100.h1_20;
 
 import java.util.Arrays;
 

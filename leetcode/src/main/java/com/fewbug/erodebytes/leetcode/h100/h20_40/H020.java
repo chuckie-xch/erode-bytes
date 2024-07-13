@@ -1,4 +1,4 @@
-package com.fewbug.erodebytes.leetcode.h100;
+package com.fewbug.erodebytes.leetcode.h100.h20_40;
 
 /**
  * @author chunhang.xch
