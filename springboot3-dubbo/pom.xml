@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.fewbug.erodebytes</groupId>
+    <artifactId>springboot3-dubbo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>springboot3-dubbo</name>
+    <description>springboot3-dubbo</description>
+    <packaging>pom</packaging>
+
+    <parent>
+        <groupId>com.fewbug</groupId>
+        <artifactId>erode-bytes</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+
+    <properties>
+        <dubbo.version>3.2.10</dubbo.version>
+        <nacos-client.version>2.2.1</nacos-client.version>
+    </properties>
+
+
+    <modules>
+        <module>dubbo-consumer</module>
+        <module>dubbo-provider</module>
+        <module>dubbo-service-api</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>com.fewbug.erodebytes</groupId>
+                <artifactId>dubbo-consumer</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fewbug.erodebytes</groupId>
+                <artifactId>dubbo-provider</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fewbug.erodebytes</groupId>
+                <artifactId>dubbo-service-api</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-bom</artifactId>
+                <version>${dubbo.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.nacos</groupId>
+                <artifactId>nacos-client</artifactId>
+                <version>${nacos-client.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

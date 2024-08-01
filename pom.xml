@@ -22,6 +22,7 @@
         <module>springboot3-mybatis</module>
         <module>leetcode</module>
         <module>task-engine</module>
+        <module>springboot3-dubbo</module>
     </modules>
 
     <url/>
