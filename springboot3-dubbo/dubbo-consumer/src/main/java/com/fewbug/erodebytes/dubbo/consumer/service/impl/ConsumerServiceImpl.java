@@ -16,9 +16,11 @@ public class ConsumerServiceImpl implements CommandLineRunner {
     @DubboReference(version = "1.0")
     private DevelopService developService;
 
+
     @Override
     public void run(String... args) throws Exception {
         System.out.println("Dubbo Remote Service Return: " + developService.invoke("test invoke"));
     }
+
 
 }

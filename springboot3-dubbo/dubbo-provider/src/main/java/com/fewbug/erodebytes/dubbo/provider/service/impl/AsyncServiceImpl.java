@@ -1,6 +1,7 @@
 package com.fewbug.erodebytes.dubbo.provider.service.impl;
 
 import com.fewbug.erodebytes.dubbo.service.api.AsyncService;
+import org.apache.dubbo.config.annotation.DubboService;
 import org.apache.dubbo.rpc.AsyncContext;
 import org.apache.dubbo.rpc.RpcContext;
 
@@ -12,11 +13,12 @@ import java.util.concurrent.ThreadLocalRandom;
  * @Description
  * @date 2024/8/1 22:41
  **/
+@DubboService(version = "1.0")
 public class AsyncServiceImpl implements AsyncService {
     @Override
     public String invoke(String param) {
         try {
-            long time = ThreadLocalRandom.current().nextLong();
+            long time = ThreadLocalRandom.current().nextLong(1000);
             Thread.sleep(time);
             StringBuilder sb = new StringBuilder();
             sb.append("AsyncService invoke param: ").append(param).append(",sleep:").append(time);
@@ -31,7 +33,7 @@ public class AsyncServiceImpl implements AsyncService {
     public CompletableFuture<String> asyncInvoke(String param) {
         return CompletableFuture.supplyAsync(() -> {
             try {
-                long time = ThreadLocalRandom.current().nextLong();
+                long time = ThreadLocalRandom.current().nextLong(1000);
                 Thread.sleep(time);
                 StringBuilder sb = new StringBuilder();
                 sb.append("AsyncService invoke param: ").append(param).append(",sleep:").append(time);
