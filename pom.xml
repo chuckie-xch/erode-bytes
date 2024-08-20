@@ -23,6 +23,7 @@
         <module>leetcode</module>
         <module>task-engine</module>
         <module>springboot3-dubbo</module>
+        <module>rockmq-java-client</module>
     </modules>
 
     <url/>
@@ -100,6 +101,12 @@
             <dependency>
                 <groupId>com.fewbug.erodebytes</groupId>
                 <artifactId>task-engine</artifactId>
+                <version>${erode-bytes.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fewbug.erodebytes</groupId>
+                <artifactId>rockmq-java-client</artifactId>
                 <version>${erode-bytes.version}</version>
             </dependency>
 
