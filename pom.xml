@@ -24,6 +24,7 @@
         <module>task-engine</module>
         <module>springboot3-dubbo</module>
         <module>rockmq-java-client</module>
+        <module>springboot3-mybatis-plus</module>
     </modules>
 
     <url/>
@@ -74,6 +75,7 @@
         <h2database.version>1.4.200</h2database.version>
         <mybatis-generator-core.version>1.4.2</mybatis-generator-core.version>
         <guava.version>32.1.2-jre</guava.version>
+        <mybatis-plus-spring-boot3-starter.version>3.5.7</mybatis-plus-spring-boot3-starter.version>
     </properties>
 
 
@@ -133,6 +135,12 @@
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${mybatis-spring-boot-starter.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+                <version>${mybatis-plus-spring-boot3-starter.version}</version>
             </dependency>
 
             <!-- DataSource: druid -->
